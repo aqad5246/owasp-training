@@ -8,7 +8,9 @@ const port = process.env.VIRTUAL_PORT || 3000
 
 const app = express()
 
-app.set('view engine', 'pug')
+app.set('views', __dirname + '/views')
+app.set('view engine', 'jsx')
+app.engine('jsx', require('express-react-views').createEngine())
 app.set('trust proxy', 1)
 app.use(morgan('combined'))
 app.use(express.static(__dirname + '/public'))
