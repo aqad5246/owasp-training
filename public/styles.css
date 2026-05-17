@@ -1,0 +1,181 @@
+/* start global styles */
+html {
+    background-color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* end global styles */
+
+/* start card styles */
+section.card {
+    background-color: #f2f2f2;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 65vw;
+}
+
+.half {
+    width: 45%;
+}
+
+.left {
+    width: 40%;
+    min-width: 300px;
+}
+
+.right {
+    width: 60%;
+    min-width: 400px;
+
+}
+
+.left section {
+    width: 100%;
+}
+
+div.bar {
+    background-color: #72818B;
+    width: 1px !important;
+    height: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+/* end card styles */
+
+/* start form and input styles */
+form {
+    padding: 0;
+    margin: 0;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'] {
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: none;
+    width: 100%;
+}
+
+input:focus,
+button:focus {
+    outline: 2px solid #72818B;
+}
+
+button {
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: none;
+    background-color: #A3ADA6;
+    width: 100%;
+}
+
+button:hover {
+    filter: brightness(120%)
+}
+
+#log-in {
+    margin-top: 3.5rem;
+}
+
+/* end form and input styles */
+
+/* start navigation styles */
+.title {
+    color: #A3ADA6;
+    letter-spacing: -2px;
+    filter: brightness(50%);
+}
+
+.user-info {
+    background-color: #b3b9b5;
+    height: 60px;
+}
+
+.user-info p {
+    margin: 1.5rem;
+}
+
+.user-info .title {
+    font-size: x-large;
+    float: left;
+}
+
+.user-info .logout-link {
+    float: right;
+}
+
+.logout {
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #d3d3d3;
+    text-decoration: none;
+    color: black;
+    background-color: #d3d3d3;
+}
+
+.logout:hover {
+    color: black;
+}
+
+/* end navigation styles */
+
+/* start bookmark styles */
+.bookmark-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section.bookmark {
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #f2f2f2;
+    width: 100%;
+    max-width: 80vw;
+    line-height: 1.2;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section.bookmark div {
+    min-width: 50%;
+}
+
+div.rating {
+    text-align: right;
+}
+
+/* end bookmark styles */
+
+/* search styles */
+#go-back {
+    width: 50%;
+}
+
+/* end search styles */

@@ -1,0 +1,39 @@
+html
+  head
+    link(rel='stylesheet', href='/styles.css')
+    script(src='https://hunter2labs.s3.amazonaws.com/common.js')
+  body
+    div.user-info
+      p.title 
+        b Bookmarker
+      p.logout-link
+        a.logout(href='/logout') Log out
+    br
+    .container
+      div.left
+        div.container-center
+          section.card
+            div= 'Logged in as ' + user.email
+            form(action='/add', method='post')
+              input#title(type='text', name='title', placeholder='New link title', required)
+              br
+              input#link(type='text', name='url', placeholder='New link url', required)
+              br
+              div
+                input#rating(type='number', name='rating', min=0, max=5, placeholder='0 to 5 Rating', required)
+              button(type='submit') Add new bookmark
+      div.right
+        div.container-center
+          section.card
+              form(action='/search', method='get')
+                input(type='text', name='q', placeholder='Title', required)
+                button(type='submit') Search for a bookmark by title
+          for bookmark in bookmarks.reverse()
+            section.bookmark  
+              div
+                div= bookmark.title
+                div
+                  a(href=bookmark.url, target="blank")= bookmark.url
+              div.rating= 'Ã¢ÂÂ'.repeat(bookmark.rating)
+
+        

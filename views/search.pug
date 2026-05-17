@@ -1,0 +1,24 @@
+html
+  head
+    link(rel='stylesheet' href='/styles.css')
+    script(src='https://hunter2labs.s3.amazonaws.com/common.js')
+  body
+    div.user-info
+      p.title 
+        b Bookmarker
+      p.logout-link
+        a.logout(href='/logout') Log out
+    br
+    form.container-center(action='/profile' method='get')
+      button#go-back(type='submit') Go back to profile
+    div.container-center
+      if bookmarks.length == 0
+        section.bookmark  
+          div No results found
+      for bookmark in bookmarks
+        section.bookmark  
+          div
+            div= bookmark.title
+            div
+              a(href=bookmark.url, target="blank")= bookmark.url
+          div.rating= 'Ã¢ÂÂ'.repeat(bookmark.rating)
